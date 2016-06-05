@@ -5,13 +5,19 @@
     <meta charset="utf-8">
     <script src="bower_components/angular/angular.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/controllers.js"></script>
+    <script src="js/controllers/controllers.js"></script>
+    <script src="js/services/guardianService.js"></script>
+    <script src="js/factories/guardianFactory.js"></script>
     <title>News Summary</title>
   </head>
 
   <body>
-    <div ng-controller="NewsSummaryController as controller">
-      <p>{{controller.greeting}}</p>
+    <div id="articles" ng-controller="NewsSummaryController as controller">
+      <p ng-repeat="article in controller.articles">
+        {{article.title}}
+        <a href="{{article.url}}">See full article</a>
+        Date Published: {{article.date}}
+      </p>
     </div>
   </body>
 </html>

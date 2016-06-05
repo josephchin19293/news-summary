@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "bower": "^1.7.9",
+    "dateformat": "^1.0.12",
     "http-server": "^0.9.0",
     "jasmine-core": "^2.4.1",
     "karma": "^0.13.22",
@@ -25,5 +26,10 @@
     "karma-cli": "^1.0.0",
     "karma-jasmine": "^1.0.2",
     "protractor": "^3.3.0"
+  },
+  "devDependencies": {
+    "jasmine-spec-reporter": "^2.4.0",
+    "karma-spec-reporter": "0.0.26",
+    "protractor-http-mock": "^0.8.0"
   }
 }
