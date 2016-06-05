@@ -1,4 +1,4 @@
-newsSummaryApp.service('guardianService', ['$http', function($http){
+newsSummaryApp.service('guardianService', ['$http','guardianFactory', function($http,guardianFactory){
   var self = this;
 
   self.getAllArticles = function() {
@@ -6,15 +6,10 @@ newsSummaryApp.service('guardianService', ['$http', function($http){
   };
 
   function _handleApiResponse(response) {
-    return response.data.results[0].type;
-    // var articles = [];
-    // for(var article in results.response) {
-    //   articles.push(logInfo(article));
-    // }
-  }
+    return response.data.response.results.map(function(item){
+      return new guardianFactory(item.webTitle, item.webPublicationDate, item.webUrl);
+    });
 
-  // var logInfo = function(item){
-  //   new NewsItemFactory(item.webTitle, item.type, item.date);
-  // };
+  }
 
 }]);

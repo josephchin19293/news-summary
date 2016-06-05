@@ -1,6 +1,7 @@
-newsSummaryApp.controller("NewsSummaryController", ["guardianService", function(guardianService) {
+newsSummaryApp.controller("NewsSummaryController", ["guardianService", "guardianFactory", function(guardianService, guardianFactory) {
     var self = this;
-    self.guardianService = guardianService;
 
-    self.greeting = "Hello, world";
+    guardianService.getAllArticles().then(function(articles){
+      self.articles = articles;
+    });
   }]);
