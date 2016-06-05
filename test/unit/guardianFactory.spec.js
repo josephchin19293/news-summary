@@ -12,11 +12,11 @@ describe('guardianFactory', function() {
   }));
 
   it('can construct a news article with a title', function() {
-    expect(newsItem.Title).toEqual("title");
+    expect(newsItem.title).toEqual("title");
   });
 
   it('can construct a news article with a date', function() {
-    expect(newsItem.Date).toEqual("date");
+    expect(newsItem.date).toEqual("date");
   });
 
   it('can construct a news article with a url', function() {
