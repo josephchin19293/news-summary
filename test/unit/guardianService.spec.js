@@ -22,7 +22,7 @@ describe('guardian api', function(){
   it('receives todays articles from the guardian api', function(){
     httpBackend.expectGET("http://content.guardianapis.com/search?from-date="+todaysDate+"&api-key=test").respond(todaysArticles);
     guardianService.getAllArticles().then(function(articles){
-      expect(articles[0].webTitle).toEqual("Donald Trump's woman problem: they don't like him, not one little bit | Richard Wolffe");
+      expect(articles[0].title).toEqual("Donald Trump's woman problem: they don't like him, not one little bit | Richard Wolffe");
     });
     httpBackend.flush();
   });
@@ -30,7 +30,7 @@ describe('guardian api', function(){
   it('receives todays articles from the guardian api', function(){
     httpBackend.expectGET("http://content.guardianapis.com/search?from-date="+todaysDate+"&api-key=test").respond(todaysArticles);
     guardianService.getAllArticles().then(function(articles){
-      expect(articles[0].pubDate).toEqual("2016-06-03T17:53:40Z");
+      expect(articles[0].date).toEqual("2016-06-03T17:53:40Z");
     });
     httpBackend.flush();
   });
