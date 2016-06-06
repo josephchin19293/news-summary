@@ -1,0 +1,45 @@
+@import url(https://fonts.googleapis.com/css?family=IM+Fell+English+SC);
+nav {
+  background-color: black;
+  opacity: 0.85;
+}
+
+.card-panel {
+  opacity: 0.95;
+}
+
+.brand-logo {
+  font-family: IM Fell English SC;
+}
+
+html {
+  background: url("../newspaperBackground.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+img {
+  max-width:100%;
+}
+
+.image {
+   position: relative;
+}
+
+h5 {
+   position: absolute;
+   top: 157px;
+   left: 5px;
+   width: 100%;
+}
+
+h5 span {
+   color: white;
+   font: bold 18px/30px Helvetica, Sans-Serif;
+   letter-spacing: -1px;
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px;
+}
